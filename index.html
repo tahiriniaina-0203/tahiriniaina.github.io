@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Tahiriniaina</title>
+    <style>
+        /* Reset et style global */
+        body { margin: 0; font-family: Arial, sans-serif; background: #f0f2f5; color: #333; }
+        a { color: #0077ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Header */
+        header { background: linear-gradient(135deg, #0077ff, #00bbff); color: white; padding: 80px 20px; text-align: center; }
+        header img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid white; object-fit: cover; margin-bottom: 15px; }
+        header h1 { margin: 10px 0; font-size: 2.8em; }
+        header p { font-size: 1.2em; }
+
+        /* Menu fixe */
+        nav { position: sticky; top: 0; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 1000; }
+        nav ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 10px 0; }
+        nav ul li { margin: 0 20px; }
+        nav ul li a { font-weight: bold; color: #0077ff; }
+
+        /* Sections */
+        section { max-width: 900px; margin: 60px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h2 { color: #0077ff; border-left: 5px solid #0077ff; padding-left: 10px; }
+        .skills span { display: inline-block; background: #e8f3ff; color: #0077ff; padding: 6px 12px; margin: 6px; border-radius: 20px; font-size: 14px; }
+        .projects li { margin-bottom: 10px; }
+
+        /* Footer */
+        footer { text-align: center; padding: 20px; color: #777; }
+
+        /* Dark mode toggle */
+        body.dark-mode { background: #181818; color: #eee; }
+        body.dark-mode header { background: linear-gradient(135deg, #444, #666); }
+        body.dark-mode section { background: #222; box-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+        body.dark-mode .skills span { background: #444; color: #00bbff; }
+        body.dark-mode nav ul li a { color: #00bbff; }
+
+        /* CV Button */
+        .cv-btn { display: inline-block; margin-top: 15px; background: #0077ff; color: white; padding: 10px 20px; border-radius: 8px; font-weight: bold; }
+        .cv-btn:hover { background: #005bb5; }
+
+        /* Responsive */
+        @media (max-width: 600px) { nav ul { flex-direction: column; } nav ul li { margin: 10px 0; } }
+    </style>
+</head>
+<body>
+
+<!-- Menu -->
+<nav>
+    <ul>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Header -->
+<header>
+    <img src="profile.png" alt="Photo de profil">
+    <h1>Tahiriniaina Rabetafika</h1>
+    <p>Étudiant en Master 1 – Météorologie, Hydrologie & Analyse de données</p>
+    <button onclick="toggleDarkMode()">Mode Sombre</button>
+</header>
+
+<!-- Sections -->
+<section id="about">
+    <h2>À propos de moi</h2>
+    <p>Passionné par la météorologie, l'hydrologie et la data science, je développe des compétences en analyse des données, modélisation et visualisation. Je suis particulièrement intéressé par l’hybridation des modèles météorologiques (ex : WRF) avec l'intelligence artificielle.</p>
+    <a class="cv-btn" href="cv.pdf" target="_blank">Télécharger mon CV</a>
+</section>
+
+<section id="skills">
+    <h2>Compétences</h2>
+    <div class="skills">
+        <span>Météorologie</span>
+        <span>Hydrologie</span>
+        <span>Analyse des données</span>
+        <span>Python</span>
+        <span>R</span>
+        <span>SIG / Cartographie</span>
+        <span>Modélisation WRF</span>
+        <span>IA & Machine Learning</span>
+        <span>Traitement de données météo</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projets</h2>
+    <ul class="projects">
+        <li>Analyse des niveaux de NO₂ et cartes temporelles</li>
+        <li>Modélisation atmosphérique WRF + modèles IA</li>
+        <li>Cartographie SIG : pluie, température, anomalies</li>
+        <li>Détection automatique d’événements météo</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email : <a href="mailto:tahiriniaina@example.com">tahiriniaina@example.com</a></p>
+    <p>GitHub : <a href="https://github.com/tahiriniaina">github.com/tahiriniaina</a></p>
+</section>
+
+<footer>
+    © 2025 – Portfolio de Tahiriniaina
+</footer>
+
+<!-- Scripts -->
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+</script>
+
+</body>
+</html>
